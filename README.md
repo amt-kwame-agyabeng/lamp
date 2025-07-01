@@ -2,6 +2,9 @@
 
 A comprehensive Terraform project that deploys a scalable 3-tier LAMP (Linux, Apache, MySQL, PHP) stack architecture on AWS with proper security and networking configurations.
 
+# Live Demo
+Access the application using link : [`http://](http://18.193.116.73/)
+
 ##  Architecture Overview
 
 This project creates a robust 3-tier architecture:
@@ -195,7 +198,5 @@ terraform destroy
 
 
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
