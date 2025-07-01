@@ -24,7 +24,16 @@ output "db_security_group_id" {
 }
 
 
+output "sql_security_group_id" {
+  value       = module.security.sql_sg_id
+  description = "ID of the database security group"
 
+}
 
+output "app_ip" {
+  value = module.compute.app_ip
+}
 
-
+output "db_ip" {
+  value = module.compute.db_ip
+}

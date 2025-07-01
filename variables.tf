@@ -150,6 +150,8 @@ variable "key_pair_name" {
 
 }
 
+
+
 #---------------------
 #Variables for Database Connection
 #---------------------
@@ -175,8 +177,3 @@ variable "db_password" {
   sensitive   = true
 }
 
-variable "sg_sql_id" {
-  description = "Security group ID for SQL"
-  type        = string
-
-}

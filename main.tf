@@ -49,15 +49,5 @@ module "compute" {
   db_user            = var.db_user
   db_password        = var.db_password
 
-}
 
-module "database" {
-  source             = "./modules/04-Database"
-  owner              = var.owner
-  environment        = var.environment
-  region             = var.region
-  db_name            = var.db_name
-  db_password        = var.db_password
-  private_subnet_ids = module.networking.private_subnet_ids
-  sg_sql_id          = module.security.sql_sg_id
 }

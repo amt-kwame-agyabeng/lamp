@@ -28,6 +28,6 @@ locals {
 
 
  locals {
-    availability_zones = ["eu-west-1a", "eu-west-1b"]
+    availability_zones = ["eu-central-1a", "eu-central-1b"]
    
  }

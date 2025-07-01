@@ -58,14 +58,7 @@ variable "sql_sg_id" {
     description = "SQL server security group ID"
     type = string
 }
-  
 
-
-
-# variable "db_host" {
-#     description = "Database host address"
-#     type = string
-# }
 
 variable "db_name" {
     description = "Database name"
