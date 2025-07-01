@@ -38,31 +38,6 @@ if (!empty(\$name) && !empty(\$message)) {
 ?>
 EOF
 
-# Create view.php to display feedback entries
-cat <<EOF > /var/www/html/view.php
-<?php
-\$conn = new mysqli("${db_ip}", "${db_user}", "${db_password}", "${db_name}");
-if (\$conn->connect_error) {
-    die("DB Connection failed: " . \$conn->connect_error);
-}
-
-\$result = \$conn->query("SELECT name, message, submitted_at FROM feedback ORDER BY submitted_at DESC");
-
-if (\$result && \$result->num_rows > 0) {
-    while (\$row = \$result->fetch_assoc()) {
-        echo "<div class='feedback-entry'>";
-        echo "<strong>" . htmlspecialchars(\$row['name']) . "</strong><br>";
-        echo "<em>" . htmlspecialchars(\$row['submitted_at']) . "</em><br>";
-        echo "<p>" . htmlspecialchars(\$row['message']) . "</p>";
-        echo "</div><hr>";
-    }
-} else {
-    echo "<p>No feedback found.</p>";
-}
-\$conn->close();
-?>
-EOF
-
 # Set permissions
-chown apache:apache /var/www/html/submit.php /var/www/html/view.php
-chmod 644 /var/www/html/submit.php /var/www/html/view.php
+chown apache:apache /var/www/html/submit.php
+chmod 644 /var/www/html/submit.php
