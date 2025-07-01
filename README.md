@@ -3,7 +3,7 @@
 A comprehensive Terraform project that deploys a scalable 3-tier LAMP (Linux, Apache, MySQL, PHP) stack architecture on AWS with proper security and networking configurations.
 
 # Live Demo
-Access the application using link : [`http://](http://18.193.116.73/)
+Access the application using link : http://18.193.116.73/
 
 ##  Architecture Overview
 
